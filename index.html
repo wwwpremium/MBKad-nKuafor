@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MB Bayan Kuaförü | Selçuklu Konya</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+<style>
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+font-family:Inter;
+background:#fff;
+color:#111;
+overflow-x:hidden;
+}
+
+/* NEON TOP */
+.ball{
+position:fixed;
+width:200px;
+height:200px;
+background:radial-gradient(circle, rgba(255,0,80,0.8), transparent);
+filter:blur(80px);
+top:20%;
+left:10%;
+animation:moveBall 10s infinite ease-in-out alternate;
+z-index:-1;
+}
+
+@keyframes moveBall{
+0%{transform:translate(0,0)}
+50%{transform:translate(500px,-200px)}
+100%{transform:translate(-200px,150px)}
+}
+
+/* NAV */
+nav{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+padding:25px 60px;
+background:#ffffffcc;
+backdrop-filter:blur(10px);
+border-bottom:1px solid #eee;
+z-index:999;
+}
+
+nav a{
+margin-left:20px;
+text-decoration:none;
+color:#555;
+}
+nav a:hover{color:#000}
+
+/* HERO */
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:0 20px;
+}
+
+.hero h1{
+font-family:Playfair Display;
+font-size:64px;
+animation:glow 4s infinite ease-in-out;
+}
+
+@keyframes glow{
+0%{text-shadow:0 0 10px rgba(0,0,0,0.1)}
+50%{text-shadow:0 0 30px rgba(255,0,100,0.4)}
+100%{text-shadow:0 0 10px rgba(0,0,0,0.1)}
+}
+
+.hero p{
+margin:15px 0;
+color:#666;
+}
+
+/* BUTTON */
+.buttons a{
+padding:12px 25px;
+border:1px solid #111;
+border-radius:30px;
+margin:5px;
+text-decoration:none;
+color:#111;
+transition:.3s;
+}
+
+.buttons a:hover{
+background:#111;
+color:#fff;
+transform:scale(1.05);
+}
+
+/* SECTION */
+section{
+padding:110px 20px;
+max-width:1100px;
+margin:auto;
+}
+
+h2{
+font-family:Playfair Display;
+text-align:center;
+margin-bottom:40px;
+animation:glow 4s infinite ease-in-out;
+}
+
+/* SERVICES */
+.services{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+}
+.service{
+padding:15px;
+border-bottom:1px solid #ddd;
+}
+
+/* GALERİ */
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+}
+.gallery img{
+width:100%;
+border-radius:8px;
+transition:.3s;
+}
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+/* CONTACT */
+.contact{
+text-align:center;
+line-height:2;
+}
+
+/* MAP */
+iframe{
+width:100%;
+height:300px;
+border:0;
+margin-top:20px;
+}
+
+/* WHATSAPP */
+.wp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25d366;
+padding:15px;
+border-radius:50%;
+text-decoration:none;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:25px;
+color:#777;
+}
+
+/* MOBILE */
+@media(max-width:700px){
+.hero h1{font-size:40px}
+.services{grid-template-columns:1fr}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="ball"></div>
+
+<nav>
+<div>MB Kuaför</div>
+<div>
+<a href="#">Ana Sayfa</a>
+<a href="#hizmet">Hizmetler</a>
+<a href="#galeri">Galeri</a>
+<a href="#iletisim">İletişim</a>
+</div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+<h1>Saçta Şıklığın Yeni Hali</h1>
+<p>Selçuklu’da profesyonel saç tasarım deneyimi</p>
+
+<div class="buttons">
+<a href="tel:05554910721">Ara</a>
+<a href="https://wa.me/905554910721">WhatsApp</a>
+<a href="https://wa.me/905554910721">Randevu Al</a>
+</div>
+</div>
+
+<!-- HİZMET -->
+<section id="hizmet">
+<h2>Hizmetler</h2>
+
+<div class="services">
+<div class="service">Kuaförlük</div>
+<div class="service">Perçem Kesimi</div>
+<div class="service">Saç Parlatma</div>
+<div class="service">Saç Boyama</div>
+<div class="service">Saç Kaynaklama</div>
+<div class="service">Topuz</div>
+<div class="service">Örgü</div>
+<div class="service">Keratin Bakım</div>
+<div class="service">Gelin Başı</div>
+<div class="service">Röfle</div>
+<div class="service">Saç Tasarım</div>
+<div class="service">Saç Kesimi</div>
+</div>
+
+</section>
+
+<!-- GALERİ -->
+<section id="galeri">
+<h2>Galeri</h2>
+<div class="gallery" id="gallery"></div>
+</section>
+
+<!-- İLETİŞİM -->
+<section id="iletisim">
+<h2>İletişim</h2>
+
+<div class="contact">
+
+<p><strong>MB Bayan Kuaförü</strong></p>
+
+<p>📍 Şeker Mh Hocacihan Tekke Cd.<br>
+Pırlanta Apt No:2/C<br>
+Selçuklu / Konya</p>
+
+<p>📞 0555 491 07 21</p>
+
+<p>
+Pzt: 09:15–19:00<br>
+Salı: Kapalı<br>
+Çarşamba – Cumartesi: 09:00–19:00<br>
+Pazar: Kapalı
+</p>
+
+</div>
+
+<iframe src="https://www.google.com/maps?q=Hocacihan%20Tekke%20Cd%20Selçuklu%20Konya&output=embed"></iframe>
+
+</section>
+
+<footer>© 2026 MB Bayan Kuaförü</footer>
+
+<a class="wp" href="https://wa.me/905554910721">💬</a>
+
+<script>
+for(let i=1;i<=20;i++){
+let img=document.createElement("img")
+img.src="img/"+i+".jpg"
+img.onerror=()=>img.remove()
+gallery.appendChild(img)
+}
+</script>
+
+</body>
+</html>
